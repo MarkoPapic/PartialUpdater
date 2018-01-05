@@ -7,22 +7,22 @@ using System.Collections.Generic;
 namespace PartialUpdater.AspCoreClient.Controllers
 {
 	[Route("api/[controller]")]
-	public class ValuesController : Controller
+	public class BlogController : Controller
     {
-		[HttpPatch("{id}")]
-		public IActionResult Patch([FromBody] PartialUpdate<SomeEntity> value)
+		[HttpPatch]
+		public IActionResult Patch([FromBody] PartialUpdate<Post> partialUpdate)
 		{
-			var someEntity = new SomeEntity
+			var post = new Post
 			{
-				SecondProperty = new SomeInnerEntity
+				Author = new Author
 				{
-					SecondInnerProperty = new SomeMoreInnerEntity()
+					ContactInfo = new ContactInfo()
 				}
 			};
 
 			try
 			{
-				value.Apply(someEntity);
+				partialUpdate.Apply(post);
 				return Ok();
 			}
 			catch(NullEntityPatchException npe)

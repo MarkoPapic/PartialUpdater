@@ -12,16 +12,12 @@ namespace PartialUpdater.AspCoreClient.Controllers
 		[HttpPatch("{id}")]
 		public IActionResult Patch([FromBody] PartialUpdate<SomeEntity> value)
 		{
-			/*var someEntity = new SomeEntity
+			var someEntity = new SomeEntity
 			{
 				SecondProperty = new SomeInnerEntity
 				{
 					SecondInnerProperty = new SomeMoreInnerEntity()
 				}
-			};*/
-			var someEntity = new SomeEntity
-			{
-				SecondProperty = new SomeInnerEntity()
 			};
 
 			try
@@ -29,7 +25,7 @@ namespace PartialUpdater.AspCoreClient.Controllers
 				value.Apply(someEntity);
 				return Ok();
 			}
-			catch(NullParentException npe)
+			catch(NullEntityPatchException npe)
 			{
 				return BadRequest(npe.Message);
 			}

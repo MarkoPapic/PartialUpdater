@@ -32,7 +32,7 @@ namespace PartialUpdater.Model
 				{
 					if (tie.InnerException != null && tie.InnerException is NullReferenceException)
 					{
-						throw new NullParentException(ErrorMessages.NullParent, tie.InnerException);
+						throw new NullEntityPatchException(ErrorMessages.NullEntityPatch, tie.InnerException);
 					}
 					else
 					{

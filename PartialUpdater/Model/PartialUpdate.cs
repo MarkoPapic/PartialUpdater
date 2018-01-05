@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
+using PartialUpdater.Constants;
 using PartialUpdater.Converters;
+using PartialUpdater.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
+using System.Reflection;
 
 namespace PartialUpdater.Model
 {
@@ -19,7 +21,21 @@ namespace PartialUpdater.Model
 		{
 			foreach (var update in Updates)
 			{
-				update.Compile().DynamicInvoke(entity);
+				try
+				{
+					update.Compile().DynamicInvoke(entity);
+				}
+				catch (TargetInvocationException tie)
+				{
+					if (tie.InnerException != null && tie.InnerException is NullReferenceException)
+					{
+						throw new NullParentException(ErrorMessages.NullParent, tie.InnerException);
+					}
+					else
+					{
+						throw;
+					}
+				}
 			}
 		}
 	}

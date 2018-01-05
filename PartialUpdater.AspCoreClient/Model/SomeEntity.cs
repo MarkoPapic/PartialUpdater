@@ -7,19 +7,19 @@ namespace PartialUpdater.AspCoreClient.Model
 {
 	public class SomeEntity
 	{
-		public string PrviProperti { get; set; }
-		public SomeInnerEntity DrugiProperti { get; set; }
-		public bool TreciProperti { get; set; }
+		public string FirstProperty { get; set; }
+		public SomeInnerEntity SecondProperty { get; set; }
+		public bool ThirdProperty { get; set; }
 	}
 
 	public class SomeInnerEntity
 	{
-		public string PrviInner { get; set; }
-		public SomeMoreInnerEntity DrugiInner { get; set; }
+		public string FirstInnerProperty { get; set; }
+		public SomeMoreInnerEntity SecondInnerProperty { get; set; }
 	}
 
 	public class SomeMoreInnerEntity
 	{
-		public string PrviMoreInner { get; set; }
+		public string FirstMoreInnerProperty { get; set; }
 	}
 }

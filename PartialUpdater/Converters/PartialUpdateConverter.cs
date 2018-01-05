@@ -20,16 +20,7 @@ namespace PartialUpdater.Converters
 		{
 			var root = JObject.Load(reader);
 			var leafs = GetLeafs(root);
-			//var b = leafs.ToArray();
-
 			var genericType = objectType.GenericTypeArguments[0];
-
-			/*var lambdas = new List<LambdaExpression>();
-
-			foreach (var leaf in b)
-			{
-				lambdas.Add(GetLambda(leaf, genericType, serializer));
-			}*/
 			var lambdas = leafs.Select(x => GetLambda(x, genericType, serializer)).ToList();
 
 			var uptaderType = typeof(PartialUpdate<>);

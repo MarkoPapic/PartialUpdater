@@ -19,6 +19,9 @@ namespace PartialUpdater.Model
 	{
 		public void Apply(T entity)
 		{
+			if (entity == null)
+				throw new ArgumentNullException(nameof(entity));
+
 			foreach (var update in Updates)
 			{
 				try

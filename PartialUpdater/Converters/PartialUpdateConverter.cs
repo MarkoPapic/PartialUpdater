@@ -9,6 +9,9 @@ using System.Linq.Expressions;
 
 namespace PartialUpdater.Converters
 {
+	/// <summary>
+	/// Converter used to deserialize JSON string to partial updates.
+	/// </summary>
 	public class PartialUpdateConverter : JsonConverter
 	{
 		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

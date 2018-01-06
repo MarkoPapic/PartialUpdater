@@ -23,7 +23,7 @@ class Post
 	public Author Author { get; set; }
 }
 ```
-that needs to be updated over the network. `Post`'s `Author` property is of type `Author`
+that needs to be updated over network. `Post`'s `Author` property is of type `Author`
 ```cs
 class Author
 {
@@ -41,7 +41,7 @@ class ContactInfo
 	public string Website { get; set; }
 }
 ```
-Now imagine a user edits the post title and author's email in the browser (or some other remote app) and wants to save it. They could send the JSON representation of the updated post over the network and then you would replace the original post with the updated one. That way, they could end up sending a large amount of unnecessary data over the network (including post content which can be large) along with the post title and author's email that need to be updated. With Partial Updater, a client can send JSON that only contains the fields that need to be updated:
+Now imagine a user edits the post title and author's email in the browser (or some other remote app) and wants to save it. They could send the JSON representation of the updated post over network and then you would replace the original post with the updated one. That way, they could end up sending a large amount of unnecessary data over network (including post content which can be large) along with the post title and author's email that need to be updated. With Partial Updater, a client can send JSON that only contains the fields that need to be updated:
 ```json
 {
 	"author": {

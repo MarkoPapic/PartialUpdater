@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PartialUpdater</name>
+    </assembly>
+    <members>
+        <member name="T:PartialUpdater.Converters.PartialUpdateConverter">
+            <summary>
+            Converter used to deserialize JSON string to partial updates.
+            </summary>
+        </member>
+        <member name="T:PartialUpdater.Model.PartialUpdate`1">
+            <summary>
+            This class contains updates for an entity. JSON is deserialized into this type.
+            </summary>
+            <typeparam name="T">The type of entity to be updated.</typeparam>
+        </member>
+        <member name="M:PartialUpdater.Model.PartialUpdate`1.Apply(`0)">
+            <summary>
+            Applies the updates to the entity.
+            </summary>
+            <param name="entity">Entity to be updated.</param>
+        </member>
+    </members>
+</doc>

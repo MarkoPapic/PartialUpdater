@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Marko Papic</Authors>
+    <PackageLicenseUrl>https://github.com/markopapic/PartialUpdater/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/markopapic/PartialUpdater</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/markopapic/PartialUpdater</RepositoryUrl>
+    <Description>A library for .NET developers that enables patching entities by providing the minimal JSON payload, containing only the fields that need to be updated, thus reducing the network traffic.</Description>
+    <NuspecFile>PartialUpdater.nuspec</NuspecFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>PartialUpdater.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>PartialUpdater.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

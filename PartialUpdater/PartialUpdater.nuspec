@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PartialUpdater</id>
+    <version>1.0.0-alpha</version>
+    <title>Partial Updater</title>
+    <authors>Marko Papic</authors>
+    <owners>markopapic</owners>
+    <licenseUrl>https://github.com/MarkoPapic/PartialUpdater/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/MarkoPapic/PartialUpdater</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for .NET developers that enables patching entities by providing the minimal JSON payload, containing only the fields that need to be updated, thus reducing the network traffic.</description>
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
+    <summary>A library for partially updating entities over network.</summary>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

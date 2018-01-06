@@ -5,9 +5,9 @@
 Partial Updater is a library for .NET developers that enables patching entities by providing the minimal JSON payload, containing only the fields that need to be updated, thus reducing the network traffic.
 
 ## Installation
+[![NuGet Version](https://img.shields.io/nuget/vpre/PartialUpdater.svg)](https://www.nuget.org/packages/PartialUpdater)
 ```
-TBD
-<!-- Install-Package ***** -->
+Install-Package PartialUpdater -Version 1.0.0-alpha
 ```
 
 ## Usage

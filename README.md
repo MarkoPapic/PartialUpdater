@@ -85,4 +85,4 @@ dotnet test ./PartialUpdater.Tests/
 ```
 
 ## License
-[MIT License](https://github.com/MarkoPapic/PartialUpdater/blob/develop/LICENSE.txt)
+[MIT License](https://github.com/MarkoPapic/PartialUpdater/blob/master/LICENSE.txt)
